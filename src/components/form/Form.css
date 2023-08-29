@@ -1,0 +1,47 @@
+.form-section {
+    padding-top: 36px;
+    padding-left: 36px;
+    padding-right: 36px;
+}
+
+.inputs-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 15px;
+    flex-direction: row;
+    gap: 17px;
+}
+
+input {
+    width: 230px;
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid #D5D4D8;
+}
+
+::placeholder {
+    padding-left: 11px;
+}
+
+.button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    width: 477px;
+    height: 40px;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #711F8D 0%, #A818DA 100%);
+}
+
+button>p {
+    color: white;
+    font-family: Karla;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
