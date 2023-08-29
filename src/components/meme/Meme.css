@@ -5,10 +5,15 @@
     margin-top: 36px;
 }
 
+.meme-image-container>.meme-img:hover {
+    transition: filter .Is ease-in-out;
+    filter: brightness(50%);
+}
+
 .meme-img {
     width: 477px;
     height: 268px;
-    border-radius: 2px;
+    border-radius: 7px;
 }
 
 .top-text {
