@@ -1,7 +1,7 @@
 import { useState } from "react";
-import "./StateExer.css";
+import "./StateCounter.css";
 
-export default function StateExer() {
+export default function StateCounter() {
 	/**
 	 * Challenge: Set up state to track our count (initial value is 0)
 	 */

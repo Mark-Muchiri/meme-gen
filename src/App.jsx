@@ -1,9 +1,9 @@
 import './App.css';
-import ComplexStateArrays from './components/ComplexStateArrays/ComplexStateArrays';
-// import State2 from './components/State2/State2';
+import ComplexStateArrays from './components/States/ComplexStateArrays/ComplexStateArrays';
+// import StateTenary from './components/States/StateTenary/StateTenary';
+// import StateCounter from './components/States/stateCounter/StateCounter';
 // import Form from './components/form/Form';
 // import Navbar from './components/navbar/Navbar';
-// import StateExer from './components/stateExer/StateExer';
 
 
 function App() {
@@ -12,8 +12,8 @@ function App() {
     <>
       {/* <Navbar /> */}
       {/* <Form /> */}
-      {/* <StateExer /> */}
-      {/* <State2 /> */}
+      {/* <StateCounter /> */}
+      {/* <StateTenary /> */}
       <ComplexStateArrays />
     </>
   );

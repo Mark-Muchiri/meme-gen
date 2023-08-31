@@ -1,7 +1,7 @@
 import { useState } from "react";
-import "./State2.css";
+import "./StateTenary.css";
 
-export default function State2() {
+export default function StateTenary() {
 	/**
 	 * Challenge:
 	 * - Initialize state for `isGoingOut` as a boolean
