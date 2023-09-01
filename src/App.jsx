@@ -1,5 +1,6 @@
 import './App.css';
-import ComplexStateArrays from './components/States/ComplexStateArrays/ComplexStateArrays';
+import ComplexStateObjects from './components/States/ComplexStateObjects/ComplexStateObjects';
+// import ComplexStateArrays from './components/States/ComplexStateArrays/ComplexStateArrays';
 // import StateTenary from './components/States/StateTenary/StateTenary';
 // import StateCounter from './components/States/stateCounter/StateCounter';
 // import Form from './components/form/Form';
@@ -14,7 +15,8 @@ function App() {
       {/* <Form /> */}
       {/* <StateCounter /> */}
       {/* <StateTenary /> */}
-      <ComplexStateArrays />
+      {/* <ComplexStateArrays /> */}
+      <ComplexStateObjects />
     </>
   );
 }
