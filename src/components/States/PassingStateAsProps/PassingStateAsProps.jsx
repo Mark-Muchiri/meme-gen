@@ -1,17 +1,18 @@
-import './PassingStateAsProps.css'
-import { useState } from "react"
+import './PassingStateAsProps.css';
+import { useState } from "react";
+import Count from './comp/Count';
 
 export default function PassingStateAsProps() {
-    const [count, setCount] = useState(0)
-    
+    const [count, setCount] = useState(0);
+
     function add() {
-        setCount(prevCount => prevCount + 1)
+        setCount(prevCount => prevCount + 1);
     }
-    
+
     function subtract() {
-        setCount(prevCount => prevCount - 1)
+        setCount(prevCount => prevCount - 1);
     }
-    
+
     /**
      * Challenge:
      * - Create a new component named Count
@@ -22,13 +23,12 @@ export default function PassingStateAsProps() {
      * - Replace the div.counter--count below with an instance of
      *   the new Count component
      */
+
     return (
         <div className="counter">
             <button className="counter--minus" onClick={subtract}>–</button>
-            <div className="counter--count">
-                <h1>{count}</h1>
-            </div>
+            <Count number={count} />
             <button className="counter--plus" onClick={add}>+</button>
         </div>
-    )
+    );
 }
