@@ -73,13 +73,13 @@ button>p {
 
 .meme-img {
     width: 300px;
-    height: 268px;
+    height: 200px;
     border-radius: 7px;
 }
 
 .top-text {
     position: absolute;
-    top: 16rem;
+    top: 15rem;
     color: white;
     font-family: Impact;
     font-size: 32px;
@@ -90,7 +90,7 @@ button>p {
 
 .bottom-text {
     position: absolute;
-    top: 28.5rem;
+    top: 24.9rem;
     color: white;
     font-family: Impact;
     font-size: 32px;
