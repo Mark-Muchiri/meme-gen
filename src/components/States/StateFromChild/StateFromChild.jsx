@@ -4,10 +4,10 @@ import Star from './comp/Star';
 
 export default function StateFromChild() {
     const [contact, setContact] = useState({
-        firstName: "John",
-        lastName: "Doe",
-        phone: "+1 (719) 555-1212",
-        email: "itsmyrealname@example.com",
+        firstName: "Mark",
+        lastName: "Muriithi",
+        phone: "+254 (790) 233-950",
+        email: "muriithimac@example.com",
         isFavorite: false,
     });
     /**
