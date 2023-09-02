@@ -6,14 +6,14 @@ import './App.css';
 // import StateTenary from './components/States/StateTenary/StateTenary';
 // import StateCounter from './components/States/stateCounter/StateCounter';
 import Form from './components/form/Form';
-// import Navbar from './components/navbar/Navbar';
+import Navbar from './components/navbar/Navbar';
 
 
 function App() {
 
   return (
     <>
-      {/* <Navbar /> */}
+      <Navbar />
       <Form />
       {/* <StateCounter /> */}
       {/* <StateTenary /> */}
