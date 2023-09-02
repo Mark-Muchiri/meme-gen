@@ -1,5 +1,6 @@
 import './App.css';
-import PassingStateAsProps from './components/States/PassingStateAsProps/PassingStateAsProps';
+import StateFromChild from './components/States/StateFromChild/StateFromChild';
+// import PassingStateAsProps from './components/States/PassingStateAsProps/PassingStateAsProps';
 // import ComplexStateObjects from './components/States/ComplexStateObjects/ComplexStateObjects';
 // import ComplexStateArrays from './components/States/ComplexStateArrays/ComplexStateArrays';
 // import StateTenary from './components/States/StateTenary/StateTenary';
@@ -18,7 +19,8 @@ function App() {
       {/* <StateTenary /> */}
       {/* <ComplexStateArrays /> */}
       {/* <ComplexStateObjects /> */}
-      <PassingStateAsProps />
+      {/* <PassingStateAsProps /> */}
+      <StateFromChild />
     </>
   );
 }
