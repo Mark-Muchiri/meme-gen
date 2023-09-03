@@ -1,18 +1,17 @@
-/* eslint-disable no-unused-vars */
-import { useState } from "react"
+import propTypes from "prop-types";
 
-export default function Header() {
-    
+export default function Header(props) {
+    Header.propTypes = {
+        user: propTypes.string.isRequired,
+    }
     /**
      * Challenge:
      * Raise state up a level and pass it down to both the
      * Header and Body components through props.
      */
-    const [user, setUser] = useState("Joe")
-    
     return (
         <header>
-            <p>Current user: {user}</p>
+            <p>Current user: {props.user}</p>
         </header>
-    )
+    );
 }
