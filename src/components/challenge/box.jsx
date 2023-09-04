@@ -15,7 +15,7 @@ export default function Box(props) {
         padding: '0',
         // onValue style
         backgroundColor: onValue ? '#0f111a' : 'lightslategrey',
-        border: onValue ? '1px solid darkslategray' : '1px solid white'
+        border: onValue ? '1px solid darkslategray' : '1px solid #0f111a'
     };
 
     function colorSwitch() {
