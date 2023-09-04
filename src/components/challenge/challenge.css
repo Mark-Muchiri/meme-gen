@@ -1,0 +1,29 @@
+* {
+    background-color: #0a0d12;
+    color: lightslategrey;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 5vh;
+}
+
+.boxes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+    float: left;
+    margin: 25vw;
+    gap: 1rem;
+}
+
+.box {
+    border: 1px solid lightgray;
+    border-radius: 0.3em;
+    width: 100px;
+    height: 100px;
+    padding: 0;
+}

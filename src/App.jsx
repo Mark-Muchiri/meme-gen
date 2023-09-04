@@ -1,5 +1,6 @@
 import './App.css';
-import PassingDataAround from './components/States/PassingDataAround/PassingDataAround';
+import Challenge from './components/challenge/challenge';
+// import PassingDataAround from './components/States/PassingDataAround/PassingDataAround';
 // import StateFromChild from './components/States/StateFromChild/StateFromChild';
 // import PassingStateAsProps from './components/States/PassingStateAsProps/PassingStateAsProps';
 // import StateTenary from './components/States/StateTenary/StateTenary';
@@ -22,7 +23,8 @@ function App() {
       {/* <ComplexStateObjects /> */}
       {/* <PassingStateAsProps /> */}
       {/* <StateFromChild /> */}
-      <PassingDataAround />
+      {/* <PassingDataAround /> */}
+      <Challenge darkmode = {false}/>
     </>
   );
 }
