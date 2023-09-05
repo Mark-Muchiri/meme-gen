@@ -4,25 +4,27 @@ import { useState } from 'react';
 import Box from './box';
 
 export default function Challenge() {
-    const [data] = useState(boxes);
-
-    /**
-     * Challenge: Create a toggle() function that logs
-     * "clicked!" to the console
-     * 
-     * Pass that function down to each of the Box components
-     * and set it up so when they get clicked it runs the function
-     */
+    const [squares, setSquares] = useState(boxes);
 
     function toggle(id) {
-        console.log(id);
+        /**
+         * Challenge: use setSquares to update the
+         * correct square in the array.
+         * 
+         * Make sure not to directly modify state!
+         * 
+         */
+        setSquares((prevSquares) => {
+            return (prevSquares.map(square => {
+                return square.id === id ? { ...square, on: !square.on } : square;
+            }));
+        });
     }
     // box map func
-    const squareElements = data.map(square => (
+    const squareElements = squares.map(square => (
         <Box
             key={square.id}
-            id={square.id}
-            toggle={toggle}
+            toggle={() => toggle(square.id)}
             on={square.on}
         />
     ));

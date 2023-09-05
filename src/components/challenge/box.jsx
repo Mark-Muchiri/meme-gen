@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import propTypes from 'prop-types';
 
 export default function Box(props) {
@@ -8,19 +7,17 @@ export default function Box(props) {
         id: propTypes.number,
     };
 
-    const [onValue] = useState(props.on);
-
     const styles = {
         borderRadius: '0.3em',
         width: '100px',
         height: '100px',
         padding: '0',
         // onValue style
-        backgroundColor: onValue ? '#0f111a' : 'lightslategrey',
-        border: onValue ? '1px solid darkslategray' : '1px solid #0f111a'
+        backgroundColor: props.on ? '#0f111a' : 'lightslategrey',
+        border: props.on ? '1px solid darkslategray' : '1px solid #0f111a'
     };
 
     return (
-        <div onClick={() => props.toggle(props.id)} style={styles} className="box"></div>
+        <div onClick={props.toggle} style={styles} className="box"></div>
     );
 }
