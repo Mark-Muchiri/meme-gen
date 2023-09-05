@@ -4,9 +4,11 @@ import propTypes from 'prop-types';
 export default function Box(props) {
     Box.propTypes = {
         on: propTypes.bool,
+        toggle: propTypes.func,
+        id: propTypes.number,
     };
 
-    const [onValue, setOnValue] = useState(props.on);
+    const [onValue] = useState(props.on);
 
     const styles = {
         borderRadius: '0.3em',
@@ -18,10 +20,7 @@ export default function Box(props) {
         border: onValue ? '1px solid darkslategray' : '1px solid #0f111a'
     };
 
-    function colorSwitch() {
-        setOnValue(color => !color);
-    }
     return (
-        <div onClick={colorSwitch} style={styles} className="box"></div>
+        <div onClick={() => props.toggle(props.id)} style={styles} className="box"></div>
     );
 }

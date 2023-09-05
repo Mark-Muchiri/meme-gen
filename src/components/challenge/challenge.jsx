@@ -5,10 +5,6 @@ import Box from './box';
 
 export default function Challenge() {
     const [data] = useState(boxes);
-    // box map func
-    const boxItems = data.map(items => (
-        <Box key={items.id} on={items.on} />
-    ));
 
     /**
      * Challenge: Create a toggle() function that logs
@@ -18,12 +14,25 @@ export default function Challenge() {
      * and set it up so when they get clicked it runs the function
      */
 
+    function toggle(id) {
+        console.log(id);
+    }
+    // box map func
+    const squareElements = data.map(square => (
+        <Box
+            key={square.id}
+            id={square.id}
+            toggle={toggle}
+            on={square.on}
+        />
+    ));
+
     return (
         <main>
             <h1>Boxes will go here</h1>
             <div className="pos">
                 <div className='boxes'>
-                    {boxItems}
+                    {squareElements}
                 </div>
             </div>
         </main>
