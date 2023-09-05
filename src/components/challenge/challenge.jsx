@@ -1,6 +1,6 @@
+import { useState } from 'react';
 import './challenge.css';
 import boxes from './boxes';
-import { useState } from 'react';
 import Box from './box';
 
 export default function Challenge() {
@@ -8,11 +8,7 @@ export default function Challenge() {
 
     function toggle(id) {
         /**
-         * Challenge: use setSquares to update the
-         * correct square in the array.
-         * 
-         * Make sure not to directly modify state!
-         * 
+         * this toggle maps through prevSquare anf gives us the new array, on the condition given by the tenary operator
          */
         setSquares((prevSquares) => {
             return (prevSquares.map(square => {

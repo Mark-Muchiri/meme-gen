@@ -4,7 +4,6 @@ export default function Box(props) {
     Box.propTypes = {
         on: propTypes.bool,
         toggle: propTypes.func,
-        id: propTypes.number,
     };
 
     const styles = {
