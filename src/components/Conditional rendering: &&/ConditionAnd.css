@@ -7,3 +7,9 @@
 body {
     font-family: "Karla", sans-serif;
 }
+
+.line {
+    width: 100%;
+    height: 2px;
+    background-color: #575f7e;
+}
