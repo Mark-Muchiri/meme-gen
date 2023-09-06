@@ -1,0 +1,11 @@
+* {
+    background-color: #0a0d12;
+    color: lightslategrey;
+    box-sizing: border-box;
+    margin-left: 0.3rem;
+    margin-right: 0.4rem;
+}
+
+body {
+    font-family: "Karla", sans-serif;
+}
