@@ -7,7 +7,8 @@ export default function Joke(props) {
         punchline: propTypes.string,
     }
     const styles = {
-        marginBottom: '10px',
+        marginTop: '-20px',
+        marginBottom: '15px',
         border: '1px solid',
         borderRadius: '5px',
         paddingTop: '3px',
@@ -28,11 +29,11 @@ export default function Joke(props) {
         })
     }
         return (
-            <div>
+            <section>
                 {props.setup && <h3>{props.setup}</h3>}
                 <p>{props.punchline}</p>
                 <button onClick={showSwitch} style={styles}>Toggle</button>
                 <div className='line' />
-            </div>
+            </section>
         )
 }
