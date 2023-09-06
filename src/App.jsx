@@ -1,5 +1,6 @@
 import './App.css';
-import Challenge from './components/challenge/challenge';
+import ConditionAnd from './components/Conditional rendering: &&/ConditionAnd';
+// import Challenge from './components/challenge/challenge';
 // import PassingDataAround from './components/States/PassingDataAround/PassingDataAround';
 // import StateFromChild from './components/States/StateFromChild/StateFromChild';
 // import PassingStateAsProps from './components/States/PassingStateAsProps/PassingStateAsProps';
@@ -24,7 +25,8 @@ function App() {
       {/* <PassingStateAsProps /> */}
       {/* <StateFromChild /> */}
       {/* <PassingDataAround /> */}
-      <Challenge darkmode = {false}/>
+      {/* <Challenge darkmode = {false}/> */}
+      <ConditionAnd />
     </>
   );
 }
