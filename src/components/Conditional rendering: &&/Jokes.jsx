@@ -31,7 +31,7 @@ export default function Joke(props) {
         <section>
             {props.setup && <h3>{props.setup}</h3>}
             {isShown && <p>{props.punchline}</p>}
-            <button onClick={showSwitch} style={styles}>Show Punchline</button>
+            {<button onClick={showSwitch} style={styles}>{isShown ? "Hide" : "Show"} punchline</button>}
             <div className='line' />
         </section>
     );
