@@ -23,6 +23,8 @@ input[type=text] {
     padding: 20px 13px;
     box-sizing: border-box;
     font-family: Karla;
+    font-style: 20px;
+    font-weight: 200px;
 }
 
 ::placeholder {

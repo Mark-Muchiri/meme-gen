@@ -5,15 +5,12 @@ import './inputChanges.css'
 export default function InputChanges() {
     const [firstName, setFirstName] = useState("")
     
-    console.log(firstName)
-    
     function handleChange(event) {
-        console.log(event.target.value)
         /**
          * Challenge: update the firstName state on every keystroke
          */
+        setFirstName(event.target.value)
     }
-    
     return (
         <form>
             <input
@@ -21,6 +18,7 @@ export default function InputChanges() {
                 placeholder="First Name"
                 onChange={handleChange}
             />
+            <p>{firstName}</p>
         </form>
     )
 }
