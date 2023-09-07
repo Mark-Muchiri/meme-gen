@@ -10,6 +10,12 @@ body {
     font-family: "Karla", sans-serif;
 }
 
+form {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
 input {
     width: 230px;
     height: 38px;
@@ -24,7 +30,7 @@ input[type=text] {
     box-sizing: border-box;
     font-family: Karla;
     font-style: 20px;
-    font-weight: 200px;
+    font-weight: 400px;
 }
 
 ::placeholder {
@@ -32,7 +38,18 @@ input[type=text] {
     font-family: Karla;
     font-size: 20px;
     font-weight: 400;
-    padding-left: calc(50% - 12%);
+    padding-left: calc(20%);
 }
 
+.center {
+    display: flex;
+    justify-content: center;
+}
 
+p {
+    color: grey;
+    font-family: Karla;
+    font-size: 1.7em;
+    font-weight: 400;
+    padding-left: calc(0%);
+}
