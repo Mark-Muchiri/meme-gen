@@ -10,7 +10,14 @@ body {
     font-family: "Karla", sans-serif;
 }
 
-form {
+section {
+    position: relative;
+    display: grid;
+    place-items: center;
+    top: 2vh;
+}
+
+.allnames {
     display: flex;
     justify-content: center;
     gap: 0.5rem;
@@ -38,18 +45,21 @@ input[type=text] {
     font-family: Karla;
     font-size: 20px;
     font-weight: 400;
-    padding-left: calc(20%);
+    text-align: center;
 }
 
 .center {
-    display: flex;
-    justify-content: center;
+    text-align: center;
 }
 
 p {
     color: grey;
     font-family: Karla;
     font-size: 1.7em;
-    font-weight: 400;
-    padding-left: calc(0%);
+}
+
+.emailprompt {
+    color: grey;
+    font-family: Karla;
+    font-size: 1.5em;
 }
