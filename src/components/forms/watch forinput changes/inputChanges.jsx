@@ -3,13 +3,13 @@ import './inputChanges.css';
 
 export default function InputChanges() {
     const [formData, setFormData] = useState(
-        { firstName: "", lastName: "", email: "" }
+        { firstName: "", lastName: "", email: "", comments:"" }
     );
-    console.log("🚀 ~ file: inputChanges.jsx:8 ~ InputChanges ~ formData:", formData)
     function handleChange(event) {
         /**
-        * Challenge: Track the applicant's last name as well
-        */
+         * Challenge: Add a textarea for "comments" to the form
+         * Make sure to update state when it changes.
+         */
         setFormData(prevFormData => {
             return {
                 ...prevFormData,
@@ -47,11 +47,22 @@ export default function InputChanges() {
                         value={formData.email}
                     />
                 </div>
+                <div className="center">
+                    <textarea
+                        placeholder='Add your comments here'
+                        name='comments'
+                        value={formData.comments}
+                        type='text'
+                        onChange={handleChange}
+                    />
+                </div>
             </form>
             <div className="center">
                 <p>Hello {formData.firstName} {formData.lastName} 😃</p>
-                <p className='emailprompt'>Your ✉️ is:</p>
+                <h3 className='prompt'>Your ✉️ is:</h3>
                 <p>{formData.email}</p>
+                <h3 className='prompt'>Comments:</h3>
+                <p>{formData.comments}</p>
             </div>
         </section>
     );

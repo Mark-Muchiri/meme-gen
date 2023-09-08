@@ -2,8 +2,7 @@
     background-color: #0a0d12;
     color: lightslategrey;
     box-sizing: border-box;
-    margin-left: 0.3rem;
-    margin-right: 0.4rem;
+    margin: 4px;
 }
 
 body {
@@ -14,13 +13,13 @@ section {
     position: relative;
     display: grid;
     place-items: center;
-    top: 10vh;
+    /* top: 0vh; */
 }
 
 .allnames {
     display: flex;
     justify-content: center;
-    gap: 0.5rem;
+    gap: 2rem;
 }
 
 input {
@@ -33,7 +32,7 @@ input {
 
 input[type=text] {
     width: 100%;
-    padding: 20px 13px;
+    padding: 20px 30px;
     box-sizing: border-box;
     font-family: Karla;
     font-style: 20px;
@@ -55,11 +54,28 @@ input[type=text] {
 p {
     color: grey;
     font-family: Karla;
-    font-size: 1.7em;
+    font-size: 1.3em;
 }
 
-.emailprompt {
+.prompt {
     color: grey;
     font-family: Karla;
     font-size: 1.5em;
+}
+
+textarea {
+    width: 300px;
+    height: 17vh;
+    border-radius: 5px;
+    border: 1px solid #D5D4D8;
+    margin-top: 1rem;
+}
+
+textarea[type=text] {
+    width: 100%;
+    padding: 20px 30px;
+    box-sizing: border-box;
+    font-family: Karla;
+    font-style: 20px;
+    font-weight: 400px;
 }
