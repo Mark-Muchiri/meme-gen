@@ -8,12 +8,12 @@ export default function InputChanges() {
             lastName: '',
             email: '',
             comments: '',
-            isDone: true,
+            isDone: false,
         }
     );
+    console.log("🚀 ~ file: inputChanges.jsx:14 ~ InputChanges ~ formData:", formData)
     function handleChange(event) {
         const { name, value, type, checked } = event.target;
-        console.log(formData.isDone);
         setFormData(prevFormData => {
             return {
                 ...prevFormData,
