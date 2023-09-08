@@ -3,17 +3,21 @@ import './inputChanges.css';
 
 export default function InputChanges() {
     const [formData, setFormData] = useState(
-        { firstName: "", lastName: "", email: "", comments:"" }
+        {
+            firstName: '',
+            lastName: '',
+            email: '',
+            comments: '',
+            isDone: true,
+        }
     );
     function handleChange(event) {
-        /**
-         * Challenge: Add a textarea for "comments" to the form
-         * Make sure to update state when it changes.
-         */
+        const { name, value, type, checked } = event.target;
+        console.log(formData.isDone);
         setFormData(prevFormData => {
             return {
                 ...prevFormData,
-                [event.target.name]: event.target.value
+                [name]: type === 'checkbox' ? checked : value
             };
         });
     }
@@ -23,6 +27,7 @@ export default function InputChanges() {
                 {/* note: For every input in React you have to add the name and value tag for it to work well. This is a standard */}
                 <div className="allnames">
                     <input
+                        className='inputtext'
                         name='firstName'
                         type="text"
                         placeholder="First Name"
@@ -30,6 +35,7 @@ export default function InputChanges() {
                         value={formData.firstName}
                     />
                     <input
+                        className='inputtext'
                         name='lastName'
                         type="text"
                         placeholder="Last Name"
@@ -39,7 +45,7 @@ export default function InputChanges() {
                 </div>
                 <div className="center">
                     <input
-                        className='center'
+                        className='inputtext'
                         name='email'
                         type="text"
                         placeholder='Email'
@@ -56,6 +62,21 @@ export default function InputChanges() {
                         onChange={handleChange}
                     />
                 </div>
+                {/* Checkboxes use the value `checked` instead of `value` */}
+                <div className="inputcheck">
+                    <input
+                        className='checkbox-input'
+                        type='checkbox'
+                        name='isDone'
+                        id='isDone'
+                        checked={formData.isDone}
+                        onChange={handleChange}
+                    />
+                    <label className='checkbox-label' htmlFor='isDone'>
+                        Are you done filling the form
+                    </label>
+                </div>
+
             </form>
             <div className="center">
                 <p>Hello {formData.firstName} {formData.lastName} 😃</p>
