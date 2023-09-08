@@ -14,7 +14,7 @@ section {
     position: relative;
     display: grid;
     place-items: center;
-    top: 2vh;
+    top: 10vh;
 }
 
 .allnames {
