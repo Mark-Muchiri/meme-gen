@@ -29,40 +29,6 @@ section {
     margin-top: 1rem;
 }
 
-/* Style the container div */
-.inputcheck {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 15px;
-}
-
-.checkbox-input {
-    appearance: none;
-    -webkit-appearance: none;
-    width: 25px;
-    height: 25px;
-    background-color: darkslategray;
-    border: 2px solid grey;
-    border-radius: 50%;
-    cursor: pointer;
-    margin-right: 10px;
-    outline: none;
-}
-
-.checkbox-input:checked {
-    background-color: green;
-    border-color: grey;
-}
-
-/* Style the label */
-.checkbox-label {
-    color: grey;
-    font-family: Karla;
-    font-size: 20px;
-    font-weight: 400;
-    text-align: center;
-}
 
 input[type=text] {
     width: 100%;
@@ -112,4 +78,61 @@ textarea[type=text] {
     font-family: Karla;
     font-style: 20px;
     font-weight: 400px;
+}
+
+/* Style the container div */
+.inputcheck {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.checkbox-input {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 25px;
+    height: 25px;
+    background-color: darkslategray;
+    border: 2px solid grey;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 10px;
+    outline: none;
+}
+
+.checkbox-input:checked {
+    background-color: green;
+    border-color: grey;
+}
+
+/* Style the label */
+.checkbox-label {
+    color: grey;
+    font-family: Karla;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.centerField{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+fieldset {
+    width: 386px;
+    height: 20vh;
+    border-radius: 5px;
+    border: 1px solid #D5D4D8;
+    margin-top: 1rem;
+}
+
+select {
+    width: 100px;
+    height: 4vh;
+    border-radius: 5px;
+    border: 1px solid #D5D4D8;
+    margin-top: 1rem;
 }
