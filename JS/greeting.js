@@ -1,7 +1,23 @@
-function greeting(name) {
+function greetings(name) {
     const date = new Date();
     const hour = date.getHours();
-    // Condition
-    (hour >= 4 && hour <= 11) ? console.log(`Good morning ${name}`) : (hour >= 12 && hour <= 16) ? console.log(`Good afternoon ${name}`) : (hour >= 17 && hour <= 19) ? console.log(`Good evening ${name}`) : (hour >= 20 && hour <= 3) ? console.log(`Good morning ${name}`) : console.log(`default`);
+
+    const message =
+        hour >= 3 && hour <= 11
+            ? `Good morning ${name}`
+            // 0300 - 1100
+            : hour >= 12 && hour <= 16
+                ? `Good afternoon ${name}`
+                // 1200 - 1600
+                : hour >= 17 && hour <= 19
+                    ? `Good evening ${name}`
+                    // 1700 - 1900
+                    : hour >= 20 && hour <= 2
+                        ? `Good night ${name}`
+                        // 2000 - 0200
+                        : `Something went wrong`;
+
+    console.log(message);
 }
-greeting("Bob");
+
+greetings("Bob");
