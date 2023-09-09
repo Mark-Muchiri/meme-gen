@@ -13,7 +13,7 @@ section {
     position: relative;
     display: grid;
     place-items: center;
-    /* top: 0vh; */
+    top: -2vh;
 }
 
 .allnames {
@@ -24,7 +24,7 @@ section {
 
 .inputtext {
     height: 38px;
-    border-radius: 5px;
+    border-radius:8px;
     border: 1px solid #D5D4D8;
     margin-top: 1rem;
 }
@@ -34,7 +34,7 @@ input[type=text] {
     width: 100%;
     padding: 20px 10px;
     box-sizing: border-box;
-    font-family: Karla;
+    font-family: Kara;
     font-style: 20px;
     font-weight: 400px;
 }
@@ -66,7 +66,7 @@ p {
 textarea {
     width: 300px;
     height: 17vh;
-    border-radius: 5px;
+    border-radius:8px;
     border: 1px solid #D5D4D8;
     margin-top: 1rem;
 }
@@ -76,7 +76,7 @@ textarea[type=text] {
     padding: 20px 30px;
     box-sizing: border-box;
     font-family: Karla;
-    font-style: 20px;
+    font-style: 20px
     font-weight: 400px;
 }
 
@@ -124,7 +124,7 @@ textarea[type=text] {
 fieldset {
     width: 386px;
     height: 20vh;
-    border-radius: 5px;
+    border-radius:8px;
     border: 1px solid #D5D4D8;
     margin-top: 1rem;
 }
@@ -132,7 +132,15 @@ fieldset {
 select {
     width: 100px;
     height: 4vh;
-    border-radius: 5px;
+    border-radius:8px;
     border: 1px solid #D5D4D8;
-    margin-top: 1rem;
+    margin-top: 1rem
+}
+
+button {
+    padding: 0.5rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    border: 2px solid white;
+    border-radius: 14px;
 }

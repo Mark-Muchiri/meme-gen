@@ -13,7 +13,6 @@ export default function InputChanges() {
             favColor: '',
         }
     );
-    console.log("🚀 ~ file: inputChanges.jsx:14 ~ InputChanges ~ formData:", formData);
     function handleChange(event) {
         const { name, value, type, checked } = event.target;
         setFormData(prevFormData => {
@@ -23,9 +22,13 @@ export default function InputChanges() {
             };
         });
     }
+    function handleSubmit(event) {
+        event.preventDefault()
+        console.log("🚀 ~ file: inputChanges.jsx:27 ~ InputChanges ~ formData:", formData);
+    }
     return (
         <section>
-            <form>
+            <form onSubmit={handleSubmit}>
                 {/* note: For every input in React you have to add the name and value tag for it to work well. This is a standard */}
                 <div className="allnames">
                     <input
@@ -103,9 +106,9 @@ export default function InputChanges() {
                                 type="radio"
                                 id="part-time"
                                 name='employed'
-                                checked={formData.employed === 'employed'}
+                                checked={formData.employed === 'Part-time'}
                                 onChange={handleChange}
-                                value='employed'
+                                value='Part-time'
                             />
                             <label className='checkbox-label' htmlFor="part-time">Part-time</label>
                             <br />
@@ -146,7 +149,10 @@ export default function InputChanges() {
                         <option value="violet" className='center' style={{fontWeight: "400", fontSize: "20px"}} >Violet</option>
                     </select>
                 </div>
-
+                <br />
+                <div className="center">
+                <button style={{fontWeight: "600", fontSize: "25px"}}>Submit</button>
+                </div>
             </form>
             <div className="center">
                 <p>Hello {formData.firstName} {formData.lastName} 😃</p>
