@@ -1,6 +1,6 @@
 import './App.css';
-import InputChanges from './components/forms/inputChanges';
-
+import Formprac from './components/forms/FormPrac/Formprac';
+// import InputChanges from './components/forms/inputChanges';
 // import AndPractice from './components/Conditional rendering: &&/practice/AndPractice'
 // import ConditionAnd from './components/Conditional rendering: &&/ConditionAnd';
 // import Challenge from './components/challenge/challenge';
@@ -31,7 +31,8 @@ function App() {
       {/* <Challenge darkmode = {false}/> */}
       {/* <ConditionAnd /> */}
       {/* <AndPractice /> */}
-      <InputChanges />
+      {/* <InputChanges /> */}
+      <Formprac />
     </>
   );
 }
