@@ -39,7 +39,7 @@ export default function Formprac() {
         event.preventDefault();
         // Mark the form as submitted for it to render the conditional elements
         setFormSubmitted(true);
-        console.log(formData);
+        // console.log(formData);
     }
 
     return (
