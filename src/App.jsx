@@ -1,5 +1,5 @@
 import './App.css';
-import Formprac from './components/forms/FormPrac/Formprac';
+// import Formprac from './components/forms/FormPrac/Formprac';
 // import InputChanges from './components/forms/inputChanges';
 // import AndPractice from './components/Conditional rendering: &&/practice/AndPractice'
 // import ConditionAnd from './components/Conditional rendering: &&/ConditionAnd';
@@ -11,16 +11,16 @@ import Formprac from './components/forms/FormPrac/Formprac';
 // import ComplexStateArrays from './components/States/ComplexStateArrays/ComplexStateArrays';
 // import StateTenary from './components/States/StateTenary/StateTenary';
 // import StateCounter from './components/States/stateCounter/StateCounter';
-// import Form from './components/form/Form';
-// import Navbar from './components/navbar/Navbar';
+import Meme from './components/form/Meme';
+import Navbar from './components/navbar/Navbar';
 
 
 function App() {
 
   return (
     <>
-      {/* <Navbar /> */}
-      {/* <Form /> */}
+      <Navbar />
+      <Meme />
       {/* <StateCounter /> */}
       {/* <StateTenary /> */}
       {/* <ComplexStateArrays /> */}
@@ -32,7 +32,7 @@ function App() {
       {/* <ConditionAnd /> */}
       {/* <AndPractice /> */}
       {/* <InputChanges /> */}
-      <Formprac />
+      {/* <Formprac /> */}
     </>
   );
 }
