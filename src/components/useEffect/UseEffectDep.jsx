@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 
 export default function useEffectDep() {
     const [starWarsData, setStarWarsData] = useState({});
-    const [count, setCount] = useState(0);
+    const [count, setCount] = useState(1);
 
     /**
  * Challenge: Combine `count` with the request URL
@@ -13,16 +13,22 @@ export default function useEffectDep() {
  * array!
  */
 
+    function countAdd() {
+        setCount(prevCount => prevCount + 1);
+    }
+
     useEffect(function () {
-        fetch("https://swapi.dev/api/people/1")
+        fetch(`https://swapi.dev/api/people/${count}`)
             .then(res => res.json())
             .then(data => setStarWarsData(data));
-    }, []);
+    }, [count]);
 
     return (
         <div>
-            <h2>The count is {count}</h2>
-            <button onClick={() => setCount(prevCount => prevCount + 1)}>Get Next Character</button>
+            <div className="parentpos">
+                <h2>The count is {count}</h2>
+                <button onClick={countAdd}>Get Next Character</button>
+            </div>
             <pre>{JSON.stringify(starWarsData, null, 2)}</pre>
         </div>
     );
