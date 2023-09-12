@@ -20,3 +20,4 @@
 4. How would you explain what the "dependecies array" is?
 - Second paramter to the useEffect function
 - A way for React to know whether it should re-run the effect function
+
