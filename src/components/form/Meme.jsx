@@ -1,62 +1,81 @@
 import "./Meme.css";
-import memeData from "../../data/memesData";
-import { useState } from "react";
+// import memeData from "../../data/memesData";
+import { useEffect, useState } from "react";
 
 export default function Meme() {
+
 	/**
 	 * Challenge: 
-	 * 1. Set up the text inputs to save to
-	 *    the `topText` and `bottomText` state variables.
-	 * 2. Replace the hard-coded text on the image with
-	 *    the text being saved to state.
+	 * As soon as the Meme component loads the first time,
+	 * make an API call to "https://api.imgflip.com/get_memes".
+	 * 
+	 * When the data comes in, save just the memes array part
+	 * of that data to the `allMemes` state
+	 * 
+	 * Think about if there are any dependencies that, if they
+	 * changed, you'd want to cause to re-run this function.
+	 * 
+	 * Hint: for now, don't try to use an async/await function.
+	 * Instead, use `.then()` blocks to resolve the promises
+	 * from using `fetch`. We'll learn why after this challenge.
 	 */
 
-	const [memeImg, setMemeImg] = useState("images/memeimg.png");
-	const [formData, setFormData] = useState(
-		{
-			toptext: '',
-			bottomtext: '',
-		}
-	);
-
-	function randomMeme() {
-		const memes = memeData.data.memes;
-		const random_meme = memes[Math.floor(Math.random() * memes.length)];
-		const url = random_meme.url;
-		setMemeImg(url);
-	}
-	function handleChange(event) {
-		const { name, type, value, checked } = event.target;
-		setFormData(prevFormData => ({
-			...prevFormData,
-			[name]: type === 'checkbox' ? checked : value
-		})
-		);
-	}
+    const [meme, setMeme] = useState({
+        topText: "",
+        bottomText: "",
+        randomImage: "http://i.imgflip.com/1bij.jpg" 
+    })
+    const [allMemes, setAllMemes] = useState([])
+    
+    useEffect(() => {
+        fetch("https://api.imgflip.com/get_memes")
+            .then(res => res.json())
+            .then(data => setAllMemes(data.data.memes))
+    }, [])
+    
+    function getMemeImage() {
+        const randomNumber = Math.floor(Math.random() * allMemes.length)
+        const url = allMemes[randomNumber].url
+        setMeme(prevMeme => ({
+            ...prevMeme,
+            randomImage: url
+        }))
+        
+    }
+    
+    function handleChange(event) {
+        const {name, value} = event.target
+        setMeme(prevMeme => ({
+            ...prevMeme,
+            [name]: value
+        }))
+    }
 
 	return (
 		<>
 			{/* form */}
 			<div className="form-section">
 				{/* inputs container */}
-				<div className="inputs-container">
-					<input
-						onChange={handleChange}
-						name="toptext"
-						value={formData.toptext}
-						type="text"
-						placeholder="Top text"
-					/>
-					<input
-						onChange={handleChange}
-						name="bottomtext"
-						value={formData.bottomtext}
-						type="text"
-						placeholder="Bottom text"
-					/>
+				<div className="input-pos">
+					<div className="inputs-container">
+						<input
+							onChange={handleChange}
+							name="toptext"
+							value={meme.toptext}
+							type="text"
+							placeholder="Top text"
+						/>
+						<input
+							onChange={handleChange}
+							name="bottomtext"
+							value={meme.bottomtext}
+							type="text"
+							placeholder="Bottom text"
+						/>
+					</div>
 				</div>
 				<div className="button">
-					<button onClick={randomMeme}>
+					<button onClick={getMemeImage}>
 						<p>Get a new meme image 🏞️ </p>
 					</button>
 				</div>
@@ -66,13 +85,14 @@ export default function Meme() {
 			<div className="meme-image-container">
 				<img
 					className="meme-img"
-					src={memeImg}
-					// src="images/memeimg.png"
+					src={meme.randomImage}
+					// src="images/allMemes.png"
 					alt="Meme image generated"
 				/>
-				<p className="top-text">{formData.toptext}</p>
-				<p className="bottom-text">{formData.bottomtext}</p>
+				<p className="top-text">{meme.toptext}</p>
+				<p className="bottom-text">{meme.bottomtext}</p>
 			</div>
+			{/* <pre>{JSON.stringify(allMemes, null, 2)}</pre> */}
 		</>
 	);
 }

@@ -1,24 +1,65 @@
 /* form */
+* {
+    margin: 0;
+}
+
+body {
+    background: #11141e;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 14px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    /* border-radius: 0px; */
+    background: #252525;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: grey;
+    border-radius: 4px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    /* background: #0b0e15; */
+}
+
 .form-section {
     padding-top: 36px;
     padding-left: 36px;
     padding-right: 36px;
 }
 
-.inputs-container {
+.input-pos {
     position: relative;
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+.inputs-container {
+    width: 390px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding-bottom: 15px;
     flex-direction: row;
-    gap: 17px;
+    gap: 20px;
 }
 
 input {
-    width: 230px;
+    width: 100%;
     height: 38px;
     border-radius: 5px;
-    border: 1px solid #D5D4D8;
+    border: 1px solid darkgrey;
+    background: #11141e;
+    color: grey;
 }
 
 input[type=text] {
@@ -29,7 +70,7 @@ input[type=text] {
 }
 
 ::placeholder {
-    color: #0D0D0D;
+    color: grey;
     font-family: Karla;
     font-size: 12px;
     font-weight: 400;
@@ -43,7 +84,7 @@ input[type=text] {
 }
 
 button {
-    width: 477px;
+    width: 390px;
     height: 40px;
     border-radius: 5px;
     background: linear-gradient(135deg, #711F8D 0%, #A818DA 100%);
@@ -51,7 +92,7 @@ button {
 }
 
 button>p {
-    color: white;
+    color: lightgray;
     font-family: Karla;
     font-size: 16px;
     font-weight: 700;
@@ -72,9 +113,10 @@ button>p {
 }
 
 .meme-img {
-    width: 360px;
-    height: 200px;
+    max-width: 470px;
+    max-height: 400px;
     border-radius: 7px;
+    object-fit: contain;
 }
 
 .top-text {

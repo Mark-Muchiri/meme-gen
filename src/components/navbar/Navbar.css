@@ -29,7 +29,7 @@
 }
 
 .logo-text {
-  color: white;
+  color: lightgray;
   font-family: Karla;
   font-size: 22px;
   font-weight: 700;
@@ -41,8 +41,16 @@
 }
 
 .other-text>p {
-  color: white;
+  color: lightgray;
   font-family: Inter;
   font-size: 12px;
   font-weight: 500;
+}
+
+pre {
+  color: lightgray;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-top: 15px;
 }
