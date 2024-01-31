@@ -1,44 +1,43 @@
-import './App.css';
-// import StateAndEffec from './components/stateAndEffect/StateAndEffect';
-// import UseEffectDep from './components/useEffect/UseEffectDep'
-// import Formprac from './components/forms/FormPrac/Formprac';
-// import InputChanges from './components/forms/inputChanges';
-// import AndPractice from './components/Conditional rendering: &&/practice/AndPractice'
-// import ConditionAnd from './components/Conditional rendering: &&/ConditionAnd';
-// import Challenge from './components/challenge/challenge';
-// import PassingDataAround from './components/States/PassingDataAround/PassingDataAround';
-// import StateFromChild from './components/States/StateFromChild/StateFromChild';
-// import PassingStateAsProps from './components/States/PassingStateAsProps/PassingStateAsProps';
+// import Navbar from './components/navbar/Navbar';
+// import Meme from './components/form/Meme';
+// import StateCounter from './components/States/stateCounter/StateCounter';
 // import StateTenary from './components/States/StateTenary/StateTenary';
 // import ComplexStateArrays from './components/States/ComplexStateArrays/ComplexStateArrays';
-// import StateTenary from './components/States/StateTenary/StateTenary';
-// import StateCounter from './components/States/stateCounter/StateCounter';
-import Meme from './components/form/Meme';
-import Navbar from './components/navbar/Navbar';
+// import ComplexStateObjects from '...'; // Path for ComplexStateObjects import is missing
+// import PassingStateAsProps from './components/States/PassingStateAsProps/PassingStateAsProps';
+// import StateFromChild from './components/States/StateFromChild/StateFromChild';
+// import PassingDataAround from './components/States/PassingDataAround/PassingDataAround';
+// import Challenge from './components/challenge/challenge';
+// import ConditionAnd from './components/Conditional rendering: &&/ConditionAnd';
+// import AndPractice from './components/Conditional rendering: &&/practice/AndPractice';
+import InputChanges from "./components/forms/inputChanges";
+// import Formprac from "./components/forms/FormPrac/Formprac";
+// import UseEffectDep from './components/useEffect/UseEffectDep';
+// import StateAndEffec from './components/stateAndEffect/StateAndEffect';
 
+import "./App.css";
 
 function App() {
-
-  return (
-    <>
-      <Navbar />
-      <Meme />
-      {/* <StateCounter /> */}
-      {/* <StateTenary /> */}
-      {/* <ComplexStateArrays /> */}
-      {/* <ComplexStateObjects /> */}
-      {/* <PassingStateAsProps /> */}
-      {/* <StateFromChild /> */}
-      {/* <PassingDataAround /> */}
-      {/* <Challenge darkmode = {false}/> */}
-      {/* <ConditionAnd /> */}
-      {/* <AndPractice /> */}
-      {/* <InputChanges /> */}
-      {/* <Formprac /> */}
-      {/* <UseEffectDep /> */}
-      {/* <StateAndEffec /> */}
-    </>
-  );
+	return (
+		<>
+			{/* <Navbar /> */}
+			{/* <Meme /> */}
+			{/* <StateCounter /> */}
+			{/* <StateTenary /> */}
+			{/* <ComplexStateArrays /> */}
+			{/* <ComplexStateObjects /> */}
+			{/* <PassingStateAsProps /> */}
+			{/* <StateFromChild /> */}
+			{/* <PassingDataAround /> */}
+			{/* <Challenge darkmode = {false}/> */}
+			{/* <ConditionAnd /> */}
+			{/* <AndPractice /> */}
+			<InputChanges />
+			{/* <Formprac /> */}
+			{/* <UseEffectDep /> */}
+			{/* <StateAndEffec /> */}
+		</>
+	);
 }
 
 export default App;
